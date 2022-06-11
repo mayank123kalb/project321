@@ -1,4 +1,4 @@
-# matching_game
+# matching_columns
 
 A new Flutter project.
 
