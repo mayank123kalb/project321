@@ -40,18 +40,23 @@ class _HomePageState extends State<HomePage> {
           icon: FontAwesomeIcons.coffee,
           icon: FontAwesomeIcons.coffee,
           value: "Coffee"),
-      ItemModel(
-          icon: FontAwesomeIcons.dog, icon: FontAwesomeIcons.dog, value: "dog"),
-      ItemModel(
-          icon: FontAwesomeIcons.cat, icon: FontAwesomeIcons.cat, value: "Cat"),
-      ItemModel(
-          icon: FontAwesomeIcons.birthdayCake,
-          icon: FontAwesomeIcons.birthdayCake,
-          value: "Cake"),
-      ItemModel(
-          icon: FontAwesomeIcons.bus, icon: FontAwesomeIcons.bus, value: "bus"),
+      ItemModel(icon: FontAwesomeIcons.dog, value: "dog"),
+      ItemModel(icon: FontAwesomeIcons.cat, value: "Cat"),
+      ItemModel(icon: FontAwesomeIcons.birthdayCake, value: "Cake"),
+      ItemModel(icon: FontAwesomeIcons.bus, value: "bus"),
     ];
-    items2 = List<ItemModel>.from(items);
+
+    items2 = [
+      ItemModel(
+          icon: FontAwesomeIcons.coffee,
+          icon: FontAwesomeIcons.coffee,
+          value: "Coffee"),
+      ItemModel(icon: FontAwesomeIcons.dog, value: "dog"),
+      ItemModel(icon: FontAwesomeIcons.cat, value: "Cat"),
+      ItemModel(icon: FontAwesomeIcons.birthdayCake, value: "Cake"),
+      ItemModel(icon: FontAwesomeIcons.bus, value: "bus"),
+    ];
+
     items.shuffle();
     items2.shuffle();
   }
@@ -60,7 +65,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     if (items.length == 0) gameOver = true;
     return Scaffold(
-      backgroundColor: Colors.amber,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
         title: Text('Column Matcher Game'),
@@ -191,3 +196,4 @@ class ItemModel {
 
   ItemModel({this.name, this.value, this.icon, this.accepting = false});
 }
+
